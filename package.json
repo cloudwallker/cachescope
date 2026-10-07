@@ -1,0 +1,59 @@
+{
+  "name": "cachescope",
+  "version": "0.1.0",
+  "description": "本地对照 GitHub Actions 缓存证据与离线报告 / Local GitHub Actions cache evidence comparison and offline reports",
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/*.test.ts",
+    "build": "tsc",
+    "test:browser": "node tests/browser.mjs",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "playwright": "1.62.1",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT",
+  "bin": {
+    "cachescope": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "compatibility.json",
+    "fixtures/",
+    "README.md",
+    "README_ZH.md",
+    "LICENSE",
+    "THIRD_PARTY_LICENSES.md",
+    "SUPPORT.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/"
+  ],
+  "keywords": [
+    "github-actions",
+    "cache",
+    "offline",
+    "diagnostics",
+    "evidence"
+  ],
+  "author": {
+    "name": "cloudwallker",
+    "url": "https://github.com/cloudwallker"
+  }
+}

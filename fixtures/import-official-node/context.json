@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "runs": {
+    "a": {"steps": [{"target": {"jobId": "build", "stepIndex": 0},
+      "regions": [{"id": "main", "phase": "main", "startLine": 1, "endLine": 1}], "evidence": []}]},
+    "b": {"steps": [{"target": {"jobId": "build", "stepIndex": 0},
+      "regions": [{"id": "main", "phase": "main", "startLine": 1, "endLine": 1}], "evidence": []}]}
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "runs": {
+    "a": {
+      "steps": [
+        {
+          "target": {
+            "jobId": "build",
+            "stepIndex": 0
+          },
+          "regions": [
+            {
+              "id": "main",
+              "phase": "main",
+              "startLine": 2,
+              "endLine": 6
+            }
+          ],
+          "evidence": [
+            {
+              "field": "executedCommit",
+              "state": "value",
+              "value": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+              "logRanges": [
+                {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              ]
+            },
+            {
+              "field": "primaryKey",
+              "state": "value",
+              "value": "public"
+            },
+            {
+              "field": "restoreKeys",
+              "state": "value",
+              "value": [
+                "fallback"
+              ]
+            },
+            {
+              "field": "runnerOS",
+              "state": "value",
+              "value": "Linux"
+            },
+            {
+              "field": "resolvedPaths",
+              "state": "value",
+              "value": [
+                ".cache"
+              ]
+            },
+            {
+              "field": "ref",
+              "state": "value",
+              "value": "refs/heads/main"
+            }
+          ]
+        }
+      ]
+    },
+    "b": {
+      "steps": [
+        {
+          "target": {
+            "jobId": "build",
+            "stepIndex": 0
+          },
+          "regions": [
+            {
+              "id": "main",
+              "phase": "main",
+              "startLine": 2,
+              "endLine": 6
+            }
+          ],
+          "evidence": [
+            {
+              "field": "executedCommit",
+              "state": "value",
+              "value": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+              "logRanges": [
+                {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              ]
+            },
+            {
+              "field": "primaryKey",
+              "state": "value",
+              "value": "public"
+            },
+            {
+              "field": "restoreKeys",
+              "state": "value",
+              "value": [
+                "fallback"
+              ]
+            },
+            {
+              "field": "runnerOS",
+              "state": "value",
+              "value": "Linux"
+            },
+            {
+              "field": "resolvedPaths",
+              "state": "value",
+              "value": [
+                ".cache"
+              ]
+            },
+            {
+              "field": "ref",
+              "state": "value",
+              "value": "refs/heads/main"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

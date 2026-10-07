@@ -1,0 +1,15 @@
+{
+  "fixtureId": "fixture:cache-restored",
+  "actionKind": "cache", "actionRef": "v4.0.2",
+  "step": {"jobIndex": 0, "stepIndex": 0, "startLine": 4, "endLine": 7},
+  "source": {
+    "repository": "actions/cache", "commit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+    "path": "src/restoreImpl.ts", "startLine": 81, "endLine": 81,
+    "contentSha256": "d816b5f35d5b7821298581d941443f20646867d63c783519ee7982b7150a401c"
+  },
+  "runs": [
+    {"runId": "a", "capture": "fixture-cache-a", "field": "restoredKey", "value": "fixture-cache-a", "logLine": 1, "startColumn": 25, "endColumn": 40, "verification": "unverified", "origin": "log", "contextPointer": "/runs/a/steps/0/regions/0", "contextLine": 5},
+    {"runId": "b", "capture": "fixture-cache-b", "field": "restoredKey", "value": "fixture-cache-b", "logLine": 1, "startColumn": 25, "endColumn": 40, "verification": "unverified", "origin": "log", "contextPointer": "/runs/b/steps/0/regions/0", "contextLine": 7}
+  ],
+  "association": {"status": "unique", "mainStatus": "unique", "saveStatus": "missing", "basis": "context-range", "selected": true}
+}

@@ -1,0 +1,17 @@
+{
+  "field": "lockfileError",
+  "value": { "state": "value", "value": { "path": "package-lock.json", "reason": "not-resolved", "pathBasis": "action-input" } },
+  "origin": "log",
+  "verification": "verified",
+  "status": "confirmed",
+  "logLines": [6,2,3,4,5,1],
+  "errorSource": { "repository": "actions/setup-node", "commit": "0a44ba7841725637a19e28fa30b79a866c81b0a6", "path": "src/cache-restore.ts", "startLine": 35, "endLine": 38, "contentSha256": "fca317ce72b603adc608fa2bf4a93d82a28dc77698999a68d4e0301c4e995f19" },
+  "downloadSource": { "repository": "actions/runner", "commit": "6f9a9110adce65f44ca6f7c0ae142b9cc6af937b", "path": "src/Runner.Worker/ActionManager.cs", "startLine": 790, "endLine": 790, "contentSha256": "cf9c61b5925610eb556eaa67899d06167e7c82370f5c229ce7d080bd16ccf656" },
+  "headerSource": { "repository": "actions/runner", "commit": "6f9a9110adce65f44ca6f7c0ae142b9cc6af937b", "path": "src/Runner.Worker/Handlers/Handler.cs", "startLine": 124, "endLine": 166, "contentSha256": "0a24ecc684bc2d3bc418b4c997c1e31bf7b96da97b6f66dc70fd16ea1e9232c7" },
+  "pathCapture": { "line": 4, "startColumn": 25, "endColumn": 42, "text": "package-lock.json" },
+  "shaCapture": { "line": 1, "startColumn": 56, "endColumn": 96, "text": "0a44ba7841725637a19e28fa30b79a866c81b0a6" },
+  "aDeclaration": { "jsonPointer": "/runs/a/steps/0/evidence/0/logRanges/0", "startLine": 4, "endLine": 4 },
+  "bDeclaration": { "jsonPointer": "/runs/b/steps/0/evidence/0/logRanges/0", "startLine": 5, "endLine": 5 },
+  "basis": "context-range",
+  "completeness": "unknown"
+}

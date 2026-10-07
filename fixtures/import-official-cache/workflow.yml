@@ -1,0 +1,7 @@
+jobs:
+  build:
+    steps:
+      - uses: actions/cache@v4.0.2
+        with:
+          key: fixture-cache
+          path: .cache

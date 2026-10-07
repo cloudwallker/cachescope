@@ -1,0 +1,763 @@
+{
+  "schemaVersion": 1,
+  "id": "compatibility:e68ed094c5c4be61f227e289481b9e6b9cea94c033513c56371056b4a3f2842a",
+  "codeSources": [
+    {
+      "id": "source:1b49890f784cec93393b027cc3cc774eb1e1bc9aa81cba8666f80e210c576495",
+      "repository": "actions/cache",
+      "commit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+      "path": "src/restoreImpl.ts",
+      "url": "https://raw.githubusercontent.com/actions/cache/0c45773b623bea8c8e75f6c82b208c3cf94ea4f9/src/restoreImpl.ts",
+      "startLine": 81,
+      "endLine": 81,
+      "statement": "core.info(`Cache restored from key: ${cacheKey}`);",
+      "contentSha256": "d816b5f35d5b7821298581d941443f20646867d63c783519ee7982b7150a401c"
+    },
+    {
+      "id": "source:3cc6d1a2efd91ea5e247f73264e83a5c4d6c4254a22f5f08477b7e6d3f2f3d99",
+      "repository": "actions/cache",
+      "commit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+      "path": "src/saveImpl.ts",
+      "url": "https://raw.githubusercontent.com/actions/cache/0c45773b623bea8c8e75f6c82b208c3cf94ea4f9/src/saveImpl.ts",
+      "startLine": 73,
+      "endLine": 73,
+      "statement": "core.info(`Cache saved with key: ${primaryKey}`);",
+      "contentSha256": "1e619eb826ff8cde79c58fd3ff8bc3f922f1fca1bf9cd2dfd3aafa068c1148bb"
+    },
+    {
+      "id": "source:43865dea013a1260f8b3f379d9edd6c92dcc51b65d8c13b589bee0ec0fcf4cdb",
+      "repository": "actions/cache",
+      "commit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+      "path": "src/saveImpl.ts",
+      "url": "https://raw.githubusercontent.com/actions/cache/0c45773b623bea8c8e75f6c82b208c3cf94ea4f9/src/saveImpl.ts",
+      "startLine": 52,
+      "endLine": 52,
+      "statement": "`Cache hit occurred on the primary key ${primaryKey}, not saving cache.`",
+      "contentSha256": "1e619eb826ff8cde79c58fd3ff8bc3f922f1fca1bf9cd2dfd3aafa068c1148bb"
+    },
+    {
+      "id": "source:721b133480139a7bd459986460fcb09382ad08c281df57ac0404797525c70477",
+      "repository": "actions/setup-node",
+      "commit": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+      "path": "src/cache-restore.ts",
+      "url": "https://raw.githubusercontent.com/actions/setup-node/0a44ba7841725637a19e28fa30b79a866c81b0a6/src/cache-restore.ts",
+      "startLine": 69,
+      "endLine": 69,
+      "statement": "core.info(`Cache restored from key: ${cacheKey}`);",
+      "contentSha256": "fca317ce72b603adc608fa2bf4a93d82a28dc77698999a68d4e0301c4e995f19"
+    },
+    {
+      "id": "source:3d046cf81831082c51fc465a0213314b20778ee48f46fc2b79a1c86cb71fdbd5",
+      "repository": "actions/setup-node",
+      "commit": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+      "path": "src/cache-save.ts",
+      "url": "https://raw.githubusercontent.com/actions/setup-node/0a44ba7841725637a19e28fa30b79a866c81b0a6/src/cache-save.ts",
+      "startLine": 68,
+      "endLine": 68,
+      "statement": "core.info(`Cache saved with the key: ${primaryKey}`);",
+      "contentSha256": "8f5bcd62db43be9ebc8bdcc9475166905e0e0d09d6b652936f6efe4d785a34f3"
+    },
+    {
+      "id": "source:907a985f6ccebe1d93eb6f337360c773ec93d225f9049bbdb2e51365e97c63d2",
+      "repository": "actions/setup-node",
+      "commit": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+      "path": "src/cache-save.ts",
+      "url": "https://raw.githubusercontent.com/actions/setup-node/0a44ba7841725637a19e28fa30b79a866c81b0a6/src/cache-save.ts",
+      "startLine": 58,
+      "endLine": 58,
+      "statement": "`Cache hit occurred on the primary key ${primaryKey}, not saving cache.`",
+      "contentSha256": "8f5bcd62db43be9ebc8bdcc9475166905e0e0d09d6b652936f6efe4d785a34f3"
+    },
+    {
+      "id": "source:3105526a2e0db8f50396cf2068ed056e2ea3587cb9e19fe3e8bc302cf04fbdaf",
+      "repository": "actions/runner",
+      "commit": "6f9a9110adce65f44ca6f7c0ae142b9cc6af937b",
+      "path": "src/Runner.Worker/ActionManager.cs",
+      "url": "https://raw.githubusercontent.com/actions/runner/6f9a9110adce65f44ca6f7c0ae142b9cc6af937b/src/Runner.Worker/ActionManager.cs",
+      "startLine": 790,
+      "endLine": 790,
+      "statement": "executionContext.Output($\"Download action repository '{downloadInfo.NameWithOwner}@{downloadInfo.Ref}' (SHA:{downloadInfo.ResolvedSha})\");",
+      "contentSha256": "cf9c61b5925610eb556eaa67899d06167e7c82370f5c229ce7d080bd16ccf656"
+    },
+    {
+      "id": "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb",
+      "repository": "actions/runner",
+      "commit": "6f9a9110adce65f44ca6f7c0ae142b9cc6af937b",
+      "path": "src/Runner.Worker/Handlers/Handler.cs",
+      "url": "https://raw.githubusercontent.com/actions/runner/6f9a9110adce65f44ca6f7c0ae142b9cc6af937b/src/Runner.Worker/Handlers/Handler.cs",
+      "startLine": 124,
+      "endLine": 166,
+      "statement": "else\n                {\n                    if (string.IsNullOrEmpty(repoAction.Path))\n                    {\n                        groupName = $\"Run {repoAction.Name}@{repoAction.Ref}\";\n                    }\n                    else\n                    {\n                        groupName = $\"Run {repoAction.Name}/{repoAction.Path}@{repoAction.Ref}\";\n                    }\n                }\n            }\n            else\n            {\n                // this should never happen\n                Trace.Error($\"Can't generate default folding group name for action {Action.Type.ToString()}\");\n                groupName = \"Action details\";\n            }\n\n            ExecutionContext.Output($\"##[group]{groupName}\");\n\n            if (this.Inputs?.Count > 0)\n            {\n                ExecutionContext.Output(\"with:\");\n                foreach (var input in this.Inputs)\n                {\n                    if (!string.IsNullOrEmpty(input.Value))\n                    {\n                        ExecutionContext.Output($\"  {input.Key}: {input.Value}\");\n                    }\n                }\n            }\n\n            if (this.Environment?.Count > 0)\n            {\n                ExecutionContext.Output(\"env:\");\n                foreach (var env in this.Environment)\n                {\n                    ExecutionContext.Output($\"  {env.Key}: {env.Value}\");\n                }\n            }\n\n            ExecutionContext.Output(\"##[endgroup]\");",
+      "contentSha256": "0a24ecc684bc2d3bc418b4c997c1e31bf7b96da97b6f66dc70fd16ea1e9232c7"
+    },
+    {
+      "id": "source:58ed2b75e475149571e6ac962500498233d7133e0379f1abb08d2dcf4f02ed9f",
+      "repository": "actions/setup-node",
+      "commit": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+      "path": "src/cache-restore.ts",
+      "url": "https://raw.githubusercontent.com/actions/setup-node/0a44ba7841725637a19e28fa30b79a866c81b0a6/src/cache-restore.ts",
+      "startLine": 35,
+      "endLine": 38,
+      "statement": "if (!fileHash) {\n    throw new Error(\n      'Some specified paths were not resolved, unable to cache dependencies.'\n    );",
+      "contentSha256": "fca317ce72b603adc608fa2bf4a93d82a28dc77698999a68d4e0301c4e995f19"
+    },
+    {
+      "id": "source:a8700a163efbd462b6ddd4655c11d7d56c42521aad9c060f4a50b0f4f01ed28f",
+      "repository": "actions/runner",
+      "commit": "6f9a9110adce65f44ca6f7c0ae142b9cc6af937b",
+      "path": "src/Runner.Worker/ExecutionContext.cs",
+      "url": "https://raw.githubusercontent.com/actions/runner/6f9a9110adce65f44ca6f7c0ae142b9cc6af937b/src/Runner.Worker/ExecutionContext.cs",
+      "startLine": 688,
+      "endLine": 725,
+      "statement": "case IssueType.Error:\n                    wellKnownTag = WellKnownTags.Error;\n                    previousCountForIssueType = _record.ErrorCount;\n                    incrementIssueTypeCount = () => { _record.ErrorCount++; };\n                    break;\n                case IssueType.Warning:\n                    wellKnownTag = WellKnownTags.Warning;\n                    previousCountForIssueType = _record.WarningCount;\n                    incrementIssueTypeCount = () => { _record.WarningCount++; };\n                    break;\n                case IssueType.Notice:\n                    wellKnownTag = WellKnownTags.Notice;\n                    previousCountForIssueType = _record.NoticeCount;\n                    incrementIssueTypeCount = () => { _record.NoticeCount++; };\n                    break;\n            }\n\n            if (!string.IsNullOrEmpty(wellKnownTag))\n            {\n                if (!this.IsEmbedded && previousCountForIssueType < _maxCountPerIssueType)\n                {\n                    incrementIssueTypeCount();\n                    _record.Issues.Add(issue);\n                }\n\n                if (logOptions.WriteToLog)\n                {\n                    string logMessage = issue.Message;\n                    if (!string.IsNullOrEmpty(logOptions.LogMessageOverride))\n                    {\n                        logMessage = logOptions.LogMessageOverride;\n                    }\n\n                    if (!string.IsNullOrEmpty(logMessage))\n                    {\n                        // Note that ::Write() has its own secret-masking logic.\n                        long logLineNumber = Write(wellKnownTag, logMessage);\n                        issue.Data[\"logFileLineNumber\"] = logLineNumber.ToString();",
+      "contentSha256": "4da6d75103c42e8c8b5217e8fff884c546b175e6d2b8e9a591fe6e6b87691190"
+    },
+    {
+      "id": "source:11fec98ac8d138cbade9095702ec08f3e36591cc127f665a7bc248b1667c35f5",
+      "repository": "actions/runner",
+      "commit": "6f9a9110adce65f44ca6f7c0ae142b9cc6af937b",
+      "path": "src/Runner.Worker/ExecutionContext.cs",
+      "url": "https://raw.githubusercontent.com/actions/runner/6f9a9110adce65f44ca6f7c0ae142b9cc6af937b/src/Runner.Worker/ExecutionContext.cs",
+      "startLine": 1523,
+      "endLine": 1523,
+      "statement": "public static readonly string Error = \"##[error]\";",
+      "contentSha256": "4da6d75103c42e8c8b5217e8fff884c546b175e6d2b8e9a591fe6e6b87691190"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry:cafe8253b5e398656ea5ca021f0ea768eaa6a4099355e5d0729cb1e1e67c9f1f",
+      "actionKind": "cache",
+      "actionName": "actions/cache",
+      "declaredRefs": [
+        "v4.0.2",
+        "v4",
+        "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9"
+      ],
+      "sourceCommit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+      "sourceIds": [
+        "source:1b49890f784cec93393b027cc3cc774eb1e1bc9aa81cba8666f80e210c576495",
+        "source:3cc6d1a2efd91ea5e247f73264e83a5c4d6c4254a22f5f08477b7e6d3f2f3d99",
+        "source:43865dea013a1260f8b3f379d9edd6c92dcc51b65d8c13b589bee0ec0fcf4cdb",
+        "source:3105526a2e0db8f50396cf2068ed056e2ea3587cb9e19fe3e8bc302cf04fbdaf",
+        "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb"
+      ],
+      "patternIds": [
+        "pattern:0adf8aca95e4b2ab5bd7d035b5ea432821dc85ec4145cdca94bd31b741cf2a4e",
+        "pattern:8f2966d91a202fb56a11ba62cd8993cb69a43e0b1ed413407e190905d09cac90",
+        "pattern:04538c56b5ce539fa0b985728ffac1c5fe502b7d34c68ff8a61ab925134a45a7",
+        "pattern:cffe2c1d7cfe1e8712e4b0d7b82087c1edc946ea81bf0db6be8d8d376eefe30a",
+        "pattern:2452e6624327d436e36617c30afbdb751174895dbacd86db1204ac1fa5b4546f",
+        "pattern:c840bfb6c87b0e27efd678f8039712448b34ddab2fe045572feb5c7d27652f16",
+        "pattern:8bf89a48f82c6f73c05139a3c75f45b505a25b2109bc65badfce7340821b3e13",
+        "pattern:4a6d94dfcd9766dc8cc74d499c4c69fb4b9ba6fb706520cea0a3be1577c7fd08"
+      ],
+      "limitations": [
+        "关联始终依赖独立用户范围，下载 SHA 仅核动作语义 / Association uses explicit user ranges; download SHA only verifies action semantics",
+        "未覆盖 runner 步骤身份及完成边界；endgroup 只闭输入头 / No runner step identity or completion boundaries; endgroup closes header only",
+        "not-found 仅 workspace/patterns，无单一目标，保持未知 / not-found workspace/patterns has no single target and remains unknown"
+      ]
+    },
+    {
+      "id": "entry:4f1e3c878cb92a2ef2347d5615e9026f0e0ccbc7179d230fcd8867d5387c9c95",
+      "actionKind": "restore",
+      "actionName": "actions/cache/restore",
+      "declaredRefs": [
+        "v4.0.2",
+        "v4",
+        "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9"
+      ],
+      "sourceCommit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+      "sourceIds": [
+        "source:1b49890f784cec93393b027cc3cc774eb1e1bc9aa81cba8666f80e210c576495",
+        "source:3cc6d1a2efd91ea5e247f73264e83a5c4d6c4254a22f5f08477b7e6d3f2f3d99",
+        "source:43865dea013a1260f8b3f379d9edd6c92dcc51b65d8c13b589bee0ec0fcf4cdb",
+        "source:3105526a2e0db8f50396cf2068ed056e2ea3587cb9e19fe3e8bc302cf04fbdaf",
+        "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb"
+      ],
+      "patternIds": [
+        "pattern:0adf8aca95e4b2ab5bd7d035b5ea432821dc85ec4145cdca94bd31b741cf2a4e",
+        "pattern:cffe2c1d7cfe1e8712e4b0d7b82087c1edc946ea81bf0db6be8d8d376eefe30a",
+        "pattern:2452e6624327d436e36617c30afbdb751174895dbacd86db1204ac1fa5b4546f",
+        "pattern:c840bfb6c87b0e27efd678f8039712448b34ddab2fe045572feb5c7d27652f16",
+        "pattern:8bf89a48f82c6f73c05139a3c75f45b505a25b2109bc65badfce7340821b3e13",
+        "pattern:4a6d94dfcd9766dc8cc74d499c4c69fb4b9ba6fb706520cea0a3be1577c7fd08"
+      ],
+      "limitations": [
+        "关联始终依赖独立用户范围，下载 SHA 仅核动作语义 / Association uses explicit user ranges; download SHA only verifies action semantics",
+        "未覆盖 runner 步骤身份及完成边界；endgroup 只闭输入头 / No runner step identity or completion boundaries; endgroup closes header only",
+        "not-found 仅 workspace/patterns，无单一目标，保持未知 / not-found workspace/patterns has no single target and remains unknown"
+      ]
+    },
+    {
+      "id": "entry:6bf002397282218a2086c8ed0a3fa6d0667907d3f05e65ebb15f60005f721f62",
+      "actionKind": "save",
+      "actionName": "actions/cache/save",
+      "declaredRefs": [
+        "v4.0.2",
+        "v4",
+        "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9"
+      ],
+      "sourceCommit": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+      "sourceIds": [
+        "source:1b49890f784cec93393b027cc3cc774eb1e1bc9aa81cba8666f80e210c576495",
+        "source:3cc6d1a2efd91ea5e247f73264e83a5c4d6c4254a22f5f08477b7e6d3f2f3d99",
+        "source:43865dea013a1260f8b3f379d9edd6c92dcc51b65d8c13b589bee0ec0fcf4cdb",
+        "source:3105526a2e0db8f50396cf2068ed056e2ea3587cb9e19fe3e8bc302cf04fbdaf",
+        "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb"
+      ],
+      "patternIds": [
+        "pattern:8f2966d91a202fb56a11ba62cd8993cb69a43e0b1ed413407e190905d09cac90",
+        "pattern:04538c56b5ce539fa0b985728ffac1c5fe502b7d34c68ff8a61ab925134a45a7",
+        "pattern:cffe2c1d7cfe1e8712e4b0d7b82087c1edc946ea81bf0db6be8d8d376eefe30a",
+        "pattern:2452e6624327d436e36617c30afbdb751174895dbacd86db1204ac1fa5b4546f",
+        "pattern:c840bfb6c87b0e27efd678f8039712448b34ddab2fe045572feb5c7d27652f16",
+        "pattern:8bf89a48f82c6f73c05139a3c75f45b505a25b2109bc65badfce7340821b3e13",
+        "pattern:4a6d94dfcd9766dc8cc74d499c4c69fb4b9ba6fb706520cea0a3be1577c7fd08"
+      ],
+      "limitations": [
+        "关联始终依赖独立用户范围，下载 SHA 仅核动作语义 / Association uses explicit user ranges; download SHA only verifies action semantics",
+        "未覆盖 runner 步骤身份及完成边界；endgroup 只闭输入头 / No runner step identity or completion boundaries; endgroup closes header only",
+        "not-found 仅 workspace/patterns，无单一目标，保持未知 / not-found workspace/patterns has no single target and remains unknown"
+      ]
+    },
+    {
+      "id": "entry:2f4804e30a37dd3f71903fb0863aa95a6cf54ae1ce174aa2fe5d975146cc2360",
+      "actionKind": "setup-node",
+      "actionName": "actions/setup-node",
+      "declaredRefs": [
+        "v4.0.4",
+        "v4",
+        "0a44ba7841725637a19e28fa30b79a866c81b0a6"
+      ],
+      "sourceCommit": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+      "sourceIds": [
+        "source:721b133480139a7bd459986460fcb09382ad08c281df57ac0404797525c70477",
+        "source:3d046cf81831082c51fc465a0213314b20778ee48f46fc2b79a1c86cb71fdbd5",
+        "source:907a985f6ccebe1d93eb6f337360c773ec93d225f9049bbdb2e51365e97c63d2",
+        "source:3105526a2e0db8f50396cf2068ed056e2ea3587cb9e19fe3e8bc302cf04fbdaf",
+        "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb",
+        "source:58ed2b75e475149571e6ac962500498233d7133e0379f1abb08d2dcf4f02ed9f"
+      ],
+      "patternIds": [
+        "pattern:6b9a6b5c5b1f1b1c0f81077a29e43818875139611b74464e05705d7e99addcda",
+        "pattern:5b046863d9d1f19b8574d10d042847941eeb844d250be03e23f4c7c9c6027e9d",
+        "pattern:5510ff062d59a4070856b1b5432e5561f8af4a77798d497c7fa406e264fa9536",
+        "pattern:cffe2c1d7cfe1e8712e4b0d7b82087c1edc946ea81bf0db6be8d8d376eefe30a",
+        "pattern:2452e6624327d436e36617c30afbdb751174895dbacd86db1204ac1fa5b4546f",
+        "pattern:c840bfb6c87b0e27efd678f8039712448b34ddab2fe045572feb5c7d27652f16",
+        "pattern:8bf89a48f82c6f73c05139a3c75f45b505a25b2109bc65badfce7340821b3e13",
+        "pattern:4a6d94dfcd9766dc8cc74d499c4c69fb4b9ba6fb706520cea0a3be1577c7fd08",
+        "pattern:d6444b620655e17dded94dd9efc24e30a46840f3370411b29d67f85ee974c2a6"
+      ],
+      "limitations": [
+        "关联始终依赖独立用户范围，下载 SHA 仅核动作语义 / Association uses explicit user ranges; download SHA only verifies action semantics",
+        "未覆盖 runner 步骤身份及完成边界；endgroup 只闭输入头 / No runner step identity or completion boundaries; endgroup closes header only",
+        "not-found 仅 workspace/patterns，无单一目标，保持未知 / not-found workspace/patterns has no single target and remains unknown"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pattern:0adf8aca95e4b2ab5bd7d035b5ea432821dc85ec4145cdca94bd31b741cf2a4e",
+      "sourceId": "source:1b49890f784cec93393b027cc3cc774eb1e1bc9aa81cba8666f80e210c576495",
+      "actionKinds": [
+        "cache",
+        "restore"
+      ],
+      "phase": "main",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "Cache restored from key: "
+        },
+        {
+          "capture": "key",
+          "codec": "key"
+        }
+      ],
+      "outputs": [
+        {
+          "field": "restoredKey",
+          "from": {
+            "kind": "capture",
+            "name": "key"
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅精确整行，执行提交仍需独立证据 / Exact line; commit requires independent evidence",
+      "fixtureIds": [
+        "fixture:cache-restored"
+      ]
+    },
+    {
+      "id": "pattern:8f2966d91a202fb56a11ba62cd8993cb69a43e0b1ed413407e190905d09cac90",
+      "sourceId": "source:3cc6d1a2efd91ea5e247f73264e83a5c4d6c4254a22f5f08477b7e6d3f2f3d99",
+      "actionKinds": [
+        "cache",
+        "save"
+      ],
+      "phase": "save",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "Cache saved with key: "
+        },
+        {
+          "capture": "key",
+          "codec": "key"
+        }
+      ],
+      "outputs": [
+        {
+          "field": "primaryKey",
+          "from": {
+            "kind": "capture",
+            "name": "key"
+          }
+        },
+        {
+          "field": "saveOutcome",
+          "from": {
+            "kind": "constant",
+            "value": "saved"
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅精确整行，执行提交仍需独立证据 / Exact line; commit requires independent evidence",
+      "fixtureIds": [
+        "fixture:cache-saved"
+      ]
+    },
+    {
+      "id": "pattern:04538c56b5ce539fa0b985728ffac1c5fe502b7d34c68ff8a61ab925134a45a7",
+      "sourceId": "source:43865dea013a1260f8b3f379d9edd6c92dcc51b65d8c13b589bee0ec0fcf4cdb",
+      "actionKinds": [
+        "cache",
+        "save"
+      ],
+      "phase": "post",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "Cache hit occurred on the primary key "
+        },
+        {
+          "capture": "key",
+          "codec": "key"
+        },
+        {
+          "literal": ", not saving cache."
+        }
+      ],
+      "outputs": [
+        {
+          "field": "primaryKey",
+          "from": {
+            "kind": "capture",
+            "name": "key"
+          }
+        },
+        {
+          "field": "saveOutcome",
+          "from": {
+            "kind": "constant",
+            "value": "skipped"
+          }
+        },
+        {
+          "field": "saveReason",
+          "from": {
+            "kind": "constant",
+            "value": {
+              "class": "normal-policy",
+              "code": "PRIMARY_KEY_HIT"
+            }
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅精确整行，执行提交仍需独立证据 / Exact line; commit requires independent evidence",
+      "fixtureIds": [
+        "fixture:cache-skip"
+      ]
+    },
+    {
+      "id": "pattern:6b9a6b5c5b1f1b1c0f81077a29e43818875139611b74464e05705d7e99addcda",
+      "sourceId": "source:721b133480139a7bd459986460fcb09382ad08c281df57ac0404797525c70477",
+      "actionKinds": [
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "Cache restored from key: "
+        },
+        {
+          "capture": "key",
+          "codec": "key"
+        }
+      ],
+      "outputs": [
+        {
+          "field": "restoredKey",
+          "from": {
+            "kind": "capture",
+            "name": "key"
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅精确整行，执行提交仍需独立证据 / Exact line; commit requires independent evidence",
+      "fixtureIds": [
+        "fixture:node-restored"
+      ]
+    },
+    {
+      "id": "pattern:5b046863d9d1f19b8574d10d042847941eeb844d250be03e23f4c7c9c6027e9d",
+      "sourceId": "source:3d046cf81831082c51fc465a0213314b20778ee48f46fc2b79a1c86cb71fdbd5",
+      "actionKinds": [
+        "setup-node"
+      ],
+      "phase": "save",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "Cache saved with the key: "
+        },
+        {
+          "capture": "key",
+          "codec": "key"
+        }
+      ],
+      "outputs": [
+        {
+          "field": "primaryKey",
+          "from": {
+            "kind": "capture",
+            "name": "key"
+          }
+        },
+        {
+          "field": "saveOutcome",
+          "from": {
+            "kind": "constant",
+            "value": "saved"
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅精确整行，执行提交仍需独立证据 / Exact line; commit requires independent evidence",
+      "fixtureIds": [
+        "fixture:node-saved"
+      ]
+    },
+    {
+      "id": "pattern:5510ff062d59a4070856b1b5432e5561f8af4a77798d497c7fa406e264fa9536",
+      "sourceId": "source:907a985f6ccebe1d93eb6f337360c773ec93d225f9049bbdb2e51365e97c63d2",
+      "actionKinds": [
+        "setup-node"
+      ],
+      "phase": "post",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "Cache hit occurred on the primary key "
+        },
+        {
+          "capture": "key",
+          "codec": "key"
+        },
+        {
+          "literal": ", not saving cache."
+        }
+      ],
+      "outputs": [
+        {
+          "field": "primaryKey",
+          "from": {
+            "kind": "capture",
+            "name": "key"
+          }
+        },
+        {
+          "field": "saveOutcome",
+          "from": {
+            "kind": "constant",
+            "value": "skipped"
+          }
+        },
+        {
+          "field": "saveReason",
+          "from": {
+            "kind": "constant",
+            "value": {
+              "class": "normal-policy",
+              "code": "PRIMARY_KEY_HIT"
+            }
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅精确整行，执行提交仍需独立证据 / Exact line; commit requires independent evidence",
+      "fixtureIds": [
+        "fixture:node-skip"
+      ]
+    },
+    {
+      "id": "pattern:cffe2c1d7cfe1e8712e4b0d7b82087c1edc946ea81bf0db6be8d8d376eefe30a",
+      "sourceId": "source:3105526a2e0db8f50396cf2068ed056e2ea3587cb9e19fe3e8bc302cf04fbdaf",
+      "actionKinds": [
+        "cache",
+        "restore",
+        "save",
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "execution-commit",
+      "segments": [
+        {
+          "literal": "Download action repository '"
+        },
+        {
+          "capture": "action",
+          "codec": "text"
+        },
+        {
+          "literal": "' (SHA:"
+        },
+        {
+          "capture": "commit",
+          "codec": "sha40"
+        },
+        {
+          "literal": ")"
+        }
+      ],
+      "outputs": [
+        {
+          "field": "executedCommit",
+          "from": {
+            "kind": "capture",
+            "name": "commit"
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅固定输入头或独立下载证据；不证明步骤身份、日志真实性或执行完成 / Fixed header or independent download; no step identity, authenticity or completion proof",
+      "fixtureIds": [
+        "fixture:runner-download"
+      ]
+    },
+    {
+      "id": "pattern:2452e6624327d436e36617c30afbdb751174895dbacd86db1204ac1fa5b4546f",
+      "sourceId": "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb",
+      "actionKinds": [
+        "cache",
+        "restore",
+        "save",
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "block-open",
+      "segments": [
+        {
+          "literal": "##[group]Run "
+        },
+        {
+          "capture": "action",
+          "codec": "text"
+        }
+      ],
+      "outputs": [],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅固定输入头或独立下载证据；不证明步骤身份、日志真实性或执行完成 / Fixed header or independent download; no step identity, authenticity or completion proof",
+      "fixtureIds": [
+        "fixture:runner-header"
+      ]
+    },
+    {
+      "id": "pattern:c840bfb6c87b0e27efd678f8039712448b34ddab2fe045572feb5c7d27652f16",
+      "sourceId": "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb",
+      "actionKinds": [
+        "cache",
+        "restore",
+        "save",
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "input-component",
+      "segments": [
+        {
+          "literal": "with:"
+        }
+      ],
+      "outputs": [],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅固定输入头或独立下载证据；不证明步骤身份、日志真实性或执行完成 / Fixed header or independent download; no step identity, authenticity or completion proof",
+      "fixtureIds": [
+        "fixture:runner-header"
+      ]
+    },
+    {
+      "id": "pattern:8bf89a48f82c6f73c05139a3c75f45b505a25b2109bc65badfce7340821b3e13",
+      "sourceId": "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb",
+      "actionKinds": [
+        "cache",
+        "restore",
+        "save",
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "input-component",
+      "segments": [
+        {
+          "literal": "  cache-dependency-path: "
+        },
+        {
+          "capture": "path",
+          "codec": "text"
+        }
+      ],
+      "outputs": [
+        {
+          "field": "dependencyPathInput",
+          "from": {
+            "kind": "capture",
+            "name": "path"
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅固定输入头或独立下载证据；不证明步骤身份、日志真实性或执行完成 / Fixed header or independent download; no step identity, authenticity or completion proof",
+      "fixtureIds": [
+        "fixture:runner-dependency-path"
+      ]
+    },
+    {
+      "id": "pattern:4a6d94dfcd9766dc8cc74d499c4c69fb4b9ba6fb706520cea0a3be1577c7fd08",
+      "sourceId": "source:f871698bfa58c5ad53fab52d1715bd09c5a5803ce1ff913fa401574b2004d9bb",
+      "actionKinds": [
+        "cache",
+        "restore",
+        "save",
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "block-close",
+      "segments": [
+        {
+          "literal": "##[endgroup]"
+        }
+      ],
+      "outputs": [],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅固定输入头或独立下载证据；不证明步骤身份、日志真实性或执行完成 / Fixed header or independent download; no step identity, authenticity or completion proof",
+      "fixtureIds": [
+        "fixture:runner-header"
+      ]
+    },
+    {
+      "id": "pattern:d6444b620655e17dded94dd9efc24e30a46840f3370411b29d67f85ee974c2a6",
+      "sourceId": "source:58ed2b75e475149571e6ac962500498233d7133e0379f1abb08d2dcf4f02ed9f",
+      "actionKinds": [
+        "setup-node"
+      ],
+      "phase": "main",
+      "role": "observation",
+      "segments": [
+        {
+          "literal": "##[error]Some specified paths were not resolved, unable to cache dependencies."
+        }
+      ],
+      "outputs": [
+        {
+          "field": "lockfileError",
+          "from": {
+            "kind": "decoder",
+            "id": "pattern:d6444b620655e17dded94dd9efc24e30a46840f3370411b29d67f85ee974c2a6",
+            "captures": [],
+            "components": [
+              {
+                "field": "dependencyPathInput",
+                "patternIds": [
+                  "pattern:8bf89a48f82c6f73c05139a3c75f45b505a25b2109bc65badfce7340821b3e13"
+                ],
+                "scope": "same-block",
+                "cardinality": "one"
+              }
+            ]
+          }
+        }
+      ],
+      "acceptedPrefixes": [
+        "none",
+        "iso8601-space"
+      ],
+      "multiline": false,
+      "anchor": "whole-line",
+      "coverage": "仅固定输入头或独立下载证据；不证明步骤身份、日志真实性或执行完成 / Fixed header or independent download; no step identity, authenticity or completion proof",
+      "fixtureIds": [
+        "fixture:node-lockfile-not-resolved"
+      ]
+    }
+  ]
+}

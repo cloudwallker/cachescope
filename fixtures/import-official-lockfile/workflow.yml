@@ -1,0 +1,7 @@
+jobs:
+  build:
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          cache: npm
+          cache-dependency-path: package-lock.json

@@ -1,0 +1,64 @@
+{
+  "exitCode": 2,
+  "findings": [
+    {
+      "code": "KEY_DIFFERENT",
+      "kind": "fact",
+      "certainty": "confirmed",
+      "messageCode": "KEY_DIFFERENT_USER_DECLARED"
+    },
+    {
+      "code": "DATE_SEGMENT_CHANGED",
+      "kind": "fact",
+      "certainty": "confirmed",
+      "messageCode": "DATE_SEGMENT_CHANGED_USER_DECLARED"
+    },
+    {
+      "code": "SAVE_OUTCOME_PENDING",
+      "kind": "pending",
+      "certainty": "unknown",
+      "messageCode": "SAVE_OUTCOME_PENDING"
+    }
+  ],
+  "missingEvidence": [
+    "POST_BOUNDARY",
+    "SAVE_RESULT"
+  ],
+  "placeholder": "REPLACE_WITH_CACHE_PATH",
+  "comparisonBasis": "user_provided",
+  "runIds": [
+    "a",
+    "b"
+  ],
+  "mainStartLine": 2,
+  "fields": {
+    "primaryKey": [
+      "linux-2026-10-01-hash",
+      "linux-2026-10-02-hash"
+    ],
+    "restoreKeys": [
+      [
+        "fallback"
+      ],
+      [
+        "fallback"
+      ]
+    ],
+    "runnerOS": [
+      "Linux",
+      "Linux"
+    ],
+    "resolvedPaths": [
+      [
+        ".cache"
+      ],
+      [
+        ".cache"
+      ]
+    ],
+    "ref": [
+      "refs/heads/main",
+      "refs/heads/main"
+    ]
+  }
+}

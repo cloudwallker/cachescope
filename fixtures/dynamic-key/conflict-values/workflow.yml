@@ -1,0 +1,8 @@
+jobs:
+  build:
+    steps:
+      - id: cache
+        uses: actions/cache@v4.0.2
+        with:
+          key: linux-${{ steps.date.outputs.day }}-hash
+          path: .cache

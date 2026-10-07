@@ -1,0 +1,6 @@
+jobs:
+  build:
+    steps:
+      - uses: actions/setup-node@v4.0.4
+        with:
+          cache: npm

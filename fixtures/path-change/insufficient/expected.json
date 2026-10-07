@@ -1,0 +1,55 @@
+{
+  "exitCode": 2,
+  "findings": [
+    {
+      "code": "PATH_CHANGE_PENDING",
+      "kind": "pending",
+      "certainty": "unknown",
+      "messageCode": "PATH_CHANGE_PENDING"
+    },
+    {
+      "code": "SAVE_OUTCOME_PENDING",
+      "kind": "pending",
+      "certainty": "unknown",
+      "messageCode": "SAVE_OUTCOME_PENDING"
+    }
+  ],
+  "missingEvidence": [
+    "RESOLVED_PATHS",
+    "POST_BOUNDARY",
+    "SAVE_RESULT"
+  ],
+  "placeholder": "REPLACE_WITH_CACHE_PATH",
+  "comparisonBasis": "user_provided",
+  "runIds": [
+    "a",
+    "b"
+  ],
+  "mainStartLine": 2,
+  "fields": {
+    "primaryKey": [
+      "public",
+      "public"
+    ],
+    "restoreKeys": [
+      [
+        "fallback"
+      ],
+      [
+        "fallback"
+      ]
+    ],
+    "runnerOS": [
+      "Linux",
+      "Linux"
+    ],
+    "resolvedPaths": [
+      null,
+      null
+    ],
+    "ref": [
+      "refs/heads/main",
+      "refs/heads/main"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fixtureId": "fixture:node-restored",
+  "actionKind": "setup-node", "actionRef": "v4.0.4",
+  "step": {"jobIndex": 0, "stepIndex": 0, "startLine": 4, "endLine": 6},
+  "source": {
+    "repository": "actions/setup-node", "commit": "0a44ba7841725637a19e28fa30b79a866c81b0a6",
+    "path": "src/cache-restore.ts", "startLine": 69, "endLine": 69,
+    "contentSha256": "fca317ce72b603adc608fa2bf4a93d82a28dc77698999a68d4e0301c4e995f19"
+  },
+  "runs": [
+    {"runId": "a", "capture": "fixture-node-a", "field": "restoredKey", "value": "fixture-node-a", "logLine": 1, "startColumn": 25, "endColumn": 39, "verification": "unverified", "origin": "log", "contextPointer": "/runs/a/steps/0/regions/0", "contextLine": 5},
+    {"runId": "b", "capture": "fixture-node-b", "field": "restoredKey", "value": "fixture-node-b", "logLine": 1, "startColumn": 25, "endColumn": 39, "verification": "unverified", "origin": "log", "contextPointer": "/runs/b/steps/0/regions/0", "contextLine": 7}
+  ],
+  "association": {"status": "unique", "mainStatus": "unique", "saveStatus": "missing", "basis": "context-range", "selected": true}
+}

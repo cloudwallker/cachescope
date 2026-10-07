@@ -1,0 +1,52 @@
+{
+  "exitCode": 2,
+  "findings": [
+    {
+      "code": "SAVE_OUTCOME_PENDING",
+      "kind": "pending",
+      "certainty": "unknown",
+      "messageCode": "SAVE_OUTCOME_PENDING"
+    }
+  ],
+  "missingEvidence": [
+    "POST_BOUNDARY",
+    "SAVE_RESULT"
+  ],
+  "placeholder": "REPLACE_WITH_CACHE_PATH",
+  "comparisonBasis": "user_provided",
+  "runIds": [
+    "a",
+    "b"
+  ],
+  "mainStartLine": 2,
+  "fields": {
+    "primaryKey": [
+      "public",
+      "public"
+    ],
+    "restoreKeys": [
+      [
+        "fallback"
+      ],
+      [
+        "fallback"
+      ]
+    ],
+    "runnerOS": [
+      "Linux",
+      "Linux"
+    ],
+    "resolvedPaths": [
+      [
+        ".cache"
+      ],
+      [
+        ".cache"
+      ]
+    ],
+    "ref": [
+      "refs/heads/main",
+      "refs/heads/main"
+    ]
+  }
+}

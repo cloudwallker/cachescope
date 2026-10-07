@@ -1,0 +1,6 @@
+Download action repository 'actions/setup-node@v4' (SHA:0a44ba7841725637a19e28fa30b79a866c81b0a6)
+##[group]Run actions/setup-node@v4
+with:
+  cache-dependency-path: package-lock.json
+##[endgroup]
+##[error]Some specified paths were not resolved, unable to cache dependencies.

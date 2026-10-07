@@ -1,0 +1,6 @@
+Download action repository 'actions/cache@v9' (SHA:0c45773b623bea8c8e75f6c82b208c3cf94ea4f9)
+##[group]Run actions/cache@v9
+with:
+  key: public
+##[endgroup]
+Cache restored from key: public

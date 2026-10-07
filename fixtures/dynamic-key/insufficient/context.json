@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "runs": {
+    "a": {
+      "steps": [
+        {
+          "target": {
+            "jobId": "build",
+            "stepIndex": 0
+          },
+          "regions": [
+            {
+              "id": "main",
+              "phase": "main",
+              "startLine": 2,
+              "endLine": 6
+            }
+          ],
+          "evidence": [
+            {
+              "field": "executedCommit",
+              "state": "value",
+              "value": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+              "logRanges": [
+                {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              ]
+            },
+            {
+              "field": "primaryKey",
+              "state": "value",
+              "value": "linux-2026-10-01-hash"
+            },
+            {
+              "field": "restoreKeys",
+              "state": "value",
+              "value": [
+                "fallback"
+              ]
+            },
+            {
+              "field": "runnerOS",
+              "state": "value",
+              "value": "Linux"
+            },
+            {
+              "field": "resolvedPaths",
+              "state": "value",
+              "value": [
+                ".cache"
+              ]
+            },
+            {
+              "field": "ref",
+              "state": "value",
+              "value": "refs/heads/main"
+            },
+            {
+              "field": "lockfileHash",
+              "state": "value",
+              "value": "hash"
+            }
+          ]
+        }
+      ]
+    },
+    "b": {
+      "steps": [
+        {
+          "target": {
+            "jobId": "build",
+            "stepIndex": 0
+          },
+          "regions": [
+            {
+              "id": "main",
+              "phase": "main",
+              "startLine": 2,
+              "endLine": 6
+            }
+          ],
+          "evidence": [
+            {
+              "field": "executedCommit",
+              "state": "value",
+              "value": "0c45773b623bea8c8e75f6c82b208c3cf94ea4f9",
+              "logRanges": [
+                {
+                  "startLine": 1,
+                  "endLine": 1
+                }
+              ]
+            },
+            {
+              "field": "primaryKey",
+              "state": "value",
+              "value": "linux-2026-10-02-hash"
+            },
+            {
+              "field": "restoreKeys",
+              "state": "value",
+              "value": [
+                "fallback"
+              ]
+            },
+            {
+              "field": "runnerOS",
+              "state": "value",
+              "value": "Linux"
+            },
+            {
+              "field": "resolvedPaths",
+              "state": "value",
+              "value": [
+                ".cache"
+              ]
+            },
+            {
+              "field": "ref",
+              "state": "value",
+              "value": "refs/heads/main"
+            },
+            {
+              "field": "lockfileHash",
+              "state": "value",
+              "value": "hash"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

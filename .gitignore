@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.test-tmp/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.tgz
+report.html
+report.json
+playwright-report/
+test-results/
