@@ -234,11 +234,16 @@ test('I01 version facts still require a unique main association', async () => {
     assert.ok(pending.missingEvidence.some(m => m.code === 'RUN_ASSOCIATION'));
     assert.equal(api.exitCode(r), 2);
 });
-test('I02 declared cache enablement and manager do not confirm the package cache object', async () => {
+for (const [lineEnding, newline] of [['LF', '\n'], ['CRLF', '\r\n'], ['CR', '\r']] as const) {
+test(`I02 declared cache enablement and manager do not confirm the package cache object (${lineEnding})`, async () => {
     const r = await changed('package-cache', (c, w) => {
         for (const run of ['a', 'b'])
             c.runs[run].steps[0].evidence.push({ field: 'cacheEnabled', state: 'value', value: true }, { field: 'packageManager', state: 'value', value: 'npm' });
-        return { c, w: w.replace('        with:\n          cache: npm\n', '') };
+        const workflow = w.replace(/\r\n|\r|\n/g, newline);
+        const withoutCache = workflow.replace(/        with:(?:\r\n|\r|\n)          cache: npm(?:\r\n|\r|\n)/, '');
+        assert.notEqual(withoutCache, workflow, 'fixture must remove the workflow cache declaration');
+        assert.ok(!withoutCache.includes('cache: npm'));
+        return { c, w: withoutCache };
     });
     const declared = r.observations.filter(o => o.field === 'cacheEnabled' || o.field === 'packageManager');
     assert.equal(declared.length, 4);
@@ -252,17 +257,22 @@ test('I02 declared cache enablement and manager do not confirm the package cache
     assert.ok(declared.every(o => pending.observationIds.includes(o.id)));
     assert.equal(api.exitCode(r), 2);
 });
-test('I02 conflicting enablement declarations retain conflict rather than confirmed object evidence', async () => {
+test(`I02 conflicting enablement declarations retain conflict rather than confirmed object evidence (${lineEnding})`, async () => {
     const r = await changed('package-cache', (c, w) => {
         for (const run of ['a', 'b'])
             c.runs[run].steps[0].evidence.push({ field: 'cacheEnabled', state: 'value', value: true }, { field: 'cacheEnabled', state: 'value', value: false }, { field: 'packageManager', state: 'value', value: 'npm' });
-        return { c, w: w.replace('        with:\n          cache: npm\n', '') };
+        const workflow = w.replace(/\r\n|\r|\n/g, newline);
+        const withoutCache = workflow.replace(/        with:(?:\r\n|\r|\n)          cache: npm(?:\r\n|\r|\n)/, '');
+        assert.notEqual(withoutCache, workflow, 'fixture must remove the workflow cache declaration');
+        assert.ok(!withoutCache.includes('cache: npm'));
+        return { c, w: withoutCache };
     });
     assert.ok(!r.findings.some(f => f.code === 'PACKAGE_CACHE_OBJECT'));
     const pending = r.findings.find(f => f.code === 'PACKAGE_CACHE_PENDING')!;
     assert.equal(pending.certainty, 'conflict');
     assert.ok(pending.missingEvidence.some(m => m.code === 'CACHE_ENABLEMENT'));
 });
+}
 test('I03 conflicting or masked post outcomes and reasons cannot confirm a normal-policy skip', async () => {
     for (const kind of ['log-outcomes', 'declared-outcome', 'declared-reason', 'masked-outcome', 'masked-reason']) {
         const r = await changed('path-change', (c, w, l) => {
