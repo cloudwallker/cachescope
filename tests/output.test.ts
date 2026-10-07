@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, writeFile, link, symlink, mkdir, stat } from 'node:fs/promises';
+import fsPromises, { readFile, writeFile, link, symlink, mkdir, stat } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { fixture } from './helpers.ts';
 import { loadAnalysisInputs, prepareOutputs } from '../src/input.ts';
@@ -91,7 +91,8 @@ test('input aliases and multi-output collisions are refused; root escape and sta
         await f.cleanup();
     }
 });
-import { open, watch as watchFs, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { syncBuiltinESMExports } from 'node:module';
 import { open as openHandle, readdir } from 'node:fs/promises';
 import { beginOutputSession, outputSessionPlan, registerOutputHandle, sealOutputHandle, validateOutputSession, commitOutputHandle, cleanupOutputSession } from '../src/input.ts';
 import { writeOutputs } from '../src/output.ts';
@@ -169,7 +170,7 @@ test('owned handle bridge refuses foreign handles and detects committed file tam
         await f.cleanup();
     }
 });
-test('partial output keeps successful first file and cleans only its own staging files', async () => {
+test('partial output keeps successful first file and cleans only its own staging files', async (t) => {
     const f = await fixture();
     try {
         const l = await loadAnalysisInputs(f.paths);
@@ -179,15 +180,35 @@ test('partial output keeps successful first file and cleans only its own staging
         assert.ok(p.ok);
         const unrelated = join(f.dir, '.cachescope-user.tmp');
         await writeFile(unrelated, 'user');
-        const watcher = watchFs(f.dir, (_event, file) => { if (String(file) === 'first.html')
-            writeFileSync(b, 'external'); });
-        const result = await writeOutputs(p.value, [payload('html', 'first'), payload('json', 'second')]);
-        watcher.close();
+        const realLink = fsPromises.link;
+        let injected = 0;
+        // Await the real publication, then create the competing destination
+        // before the writer resumes. Filesystem watch delivery is not a barrier.
+        const publication = t.mock.method(fsPromises, 'link', async (source, destination) => {
+            await realLink(source, destination);
+            if (destination === a) {
+                assert.equal(readFileSync(a, 'utf8'), 'first');
+                assert.equal(existsSync(b), false);
+                writeFileSync(b, 'external', { flag: 'wx' });
+                injected++;
+            }
+        });
+        syncBuiltinESMExports();
+        let result;
+        try {
+            result = await writeOutputs(p.value, [payload('html', 'first'), payload('json', 'second')]);
+        }
+        finally {
+            publication.mock.restore();
+            syncBuiltinESMExports();
+        }
+        assert.equal(injected, 1, 'the competing file must be created after the real first publication');
         assert.equal(result.ok, false);
         if (!result.ok)
             assert.equal(result.diagnostics[0]!.code, 'PARTIAL_OUTPUT');
         assert.equal(await readFile(a, 'utf8'), 'first');
         assert.equal(await readFile(b, 'utf8'), 'external');
+        assert.equal(await readFile(unrelated, 'utf8'), 'user');
         assert.deepEqual((await readdir(f.dir)).filter(x => x.startsWith('.cachescope-')), ['.cachescope-user.tmp']);
     }
     finally {
