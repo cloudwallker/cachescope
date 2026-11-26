@@ -34,6 +34,28 @@ try{
   assert.deepEqual(await Promise.all(files.map(async f=>hash(await readFile(join(input,f))))),before);
   console.log('PASS offline browser '+id+' · source / filter / search / copy / export / 390px / keyboard / input SHA');
  }
+ for(const [locale, title, combined, unrelated] of [
+  ['zh-CN', '保存结果仍待确认', '  未知   保存结果  ', '保存结果 日期段'],
+  ['en', 'Save outcome needs confirmation', '  UNKNOWN   outcome  ', 'outcome segment'],
+ ]){
+  const html=join(root,'search-'+locale+'.html');
+  const result=cli(['demo','dynamic-key','--locale',locale,'--html',html,'--overwrite']);
+  assert.equal(result.status,2,result.stdout+result.stderr);
+  await page.goto(pathToFileURL(html).href);
+  const search=page.locator('#search'), findings=page.locator('#view article[data-kind]');
+  const initialCount=await findings.count();
+  assert.ok(initialCount>1);
+  for(const query of [title,combined,'save_outcome_pending']){
+   await search.fill(query);
+   assert.equal(await findings.count(),1,query);
+   assert.equal(await findings.locator('p.meta').first().textContent(),'SAVE_OUTCOME_PENDING');
+  }
+  await search.fill(unrelated);
+  assert.equal(await findings.count(),0);
+  await search.fill('   ');
+  assert.equal(await findings.count(),initialCount);
+ }
+ console.log('PASS offline search by translated finding, combined terms and report code in both locales');
  for(const variant of ['insufficient','conflict-values','conflict-action-ref']){
   const dir=resolve('fixtures/dynamic-key',variant),html=join(root,variant+'.html');const r=cli(['--workflow',join(dir,'workflow.yml'),'--run-a',join(dir,'run-a.txt'),'--run-b',join(dir,'run-b.txt'),'--context',join(dir,'context.json'),'--html',html,'--json','--overwrite']);assert.equal(r.status,2,r.stdout);const report=JSON.parse(r.stdout);assert.ok(report.findings.some(f=>f.kind==='pending'));await page.goto(pathToFileURL(html).href);assert.ok(await page.locator('article[data-kind="pending"]').count());if(variant.startsWith('conflict'))assert.ok((await page.locator('#view').innerText()).includes('冲突'));console.log('PASS browser variant '+variant);
  }

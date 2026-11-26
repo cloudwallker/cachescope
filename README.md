@@ -8,6 +8,8 @@
 
 CacheScope compares a workflow with two run logs and optional context/cache-list files. It shows five evidence cards—key, restore keys, OS, resolved paths, and ref—alongside findings, missing evidence, source locations, and copyable YAML suggestions.
 
+Search the offline report by the words shown in a finding or by its report code. Combine keywords to narrow the results.
+
 ![Synthetic offline report](docs/report-desktop.png)
 
 ## Run from source
@@ -59,6 +61,8 @@ Unknown or repeated options fail with exit 3. `-` is not a file-output alias. De
 | 3 | Invalid input, a budget limit, or an input/output failure. |
 
 ## Read the report
+
+In the English `dynamic-key` demo, search for `outcome unknown` to find the pending save outcome by its title and certainty badge. All space-separated terms must match the same item, in any order. Searches ignore case and work alongside the finding-type filter.
 
 Switch between computed steps, search the safe report and filter findings. Each source link opens the relevant physical line; column ranges and JSON pointers locate the original token. Omitted text is shown as an ellipsis. A zero-width redacted marker is a structural anchor. The page exports the same whole Report JSON and copies static YAML templates with required `REPLACE_WITH_*` placeholders. If clipboard permission is unavailable, a selected text area provides keyboard copying.
 
