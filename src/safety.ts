@@ -160,7 +160,8 @@ export interface JsonIndex {
     }>;
 }
 export function parseJson(text: string, consume: (n: number) => void): JsonIndex {
-    let i = 0;
+    // Skip a leading UTF-8 BOM while keeping indexes relative to the original text.
+    let i = text.startsWith('\uFEFF') ? 1 : 0;
     const nodes = new Map<string, {
         start: number;
         end: number;

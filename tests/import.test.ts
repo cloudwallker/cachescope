@@ -34,6 +34,27 @@ test('duplicate YAML keys, cycles, malformed UTF8 and NUL are safe failures', as
     code(await load(new Uint8Array([255])), 'UTF8_INVALID');
     code(await load(simple + '\0'), 'NUL_INVALID');
 });
+test('JSON inputs with a leading UTF-8 BOM retain evidence coordinates and original byte hashes', async () => {
+    const bom = '\uFEFF';
+    const context = bom + JSON.stringify(contextFor(undefined, [{ field: 'primaryKey', state: 'value', value: 'public-key' }]));
+    const cacheList = bom + '[{"key":"public-key"}]';
+    const loaded = await load(simple, 'ordinary', 'ordinary', context, cacheList);
+    assert.ok(loaded.ok, loaded.ok ? '' : loaded.diagnostics.map(d => d.code).join(', '));
+    const inputs = loaded.value.inputs;
+    assert.deepEqual(inputs.context?.steps[0]?.evidence[0]?.value, { state: 'value', value: 'public-key' });
+    assert.deepEqual(inputs.cacheList?.entries[0]?.key, { state: 'value', value: 'public-key' });
+    for (const [kind, text] of [['context', context], ['cache-list', cacheList]] as const) {
+        const source = inputs.sources.find(source => source.kind === kind);
+        assert.equal(source?.sha256, createHash('sha256').update(text).digest('hex'));
+    }
+    const excerpt = inputs.excerpts.find(e => e.ref.jsonPointer === '/0/key');
+    assert.equal(excerpt?.lines[0]?.line, 1);
+    assert.deepEqual(excerpt?.lines[0]?.parts, [{ startColumn: 9, endColumn: 21, text: '"public-key"' }]);
+});
+test('JSON inputs reject repeated or misplaced BOMs', async () => {
+    for (const cacheList of ['\uFEFF\uFEFF[]', ' \uFEFF[]', '[]\uFEFF', '[\uFEFF{}]'])
+        code(await load(simple, '', '', undefined, cacheList), 'JSON_INVALID');
+});
 test('fixed official restore pattern captures line 1 via context and mutable tag remains unverified', async () => {
     const x = value(await load(simple, '\x1b[32mCache restored from key: public-key\x1b[0m', 'Cache restored from key: next-key', contextFor()));
     const o = x.runs[0].observations.find((o: any) => o.field === 'restoredKey');
